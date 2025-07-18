@@ -1,6 +1,6 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name(""), _grade()//kontrol et
+Bureaucrat::Bureaucrat() : _name(""), _grade()
 {
 
 }
