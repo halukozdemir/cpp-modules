@@ -93,7 +93,7 @@ void ScalarConverter::convert(const std::string& literal)
         long l = std::strtol(literal.c_str(), NULL, 10);
         if (errno == ERANGE || l < INT_MIN || l > INT_MAX) {
             std::cout << "char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible" << std::endl;
-            return;
+            return ;
         }
         int i = static_cast<int>(l);
         printChar(i);
