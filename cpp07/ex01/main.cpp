@@ -22,6 +22,12 @@ void printConstString(const std::string& str)
     std::cout << str << " ";
 }
 
+template<typename T>
+void print(T& value)
+{
+    std::cout << value << " ";
+}
+
 int main()
 {
     int arr1[] = {1, 2, 3, 4, 5};
@@ -43,6 +49,14 @@ int main()
     
     std::cout << "Const string array: ";
     iter(arr4, 3, printConstString);
+    std::cout << std::endl;
+    
+    std::cout << "Template function with int array: ";
+    iter(arr1, 5, print<int>);
+    std::cout << std::endl;
+    
+    std::cout << "Template function with string array: ";
+    iter(arr3, 3, print<std::string>);
     std::cout << std::endl;
     
     return 0;

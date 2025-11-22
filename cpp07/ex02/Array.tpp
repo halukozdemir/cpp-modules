@@ -8,7 +8,7 @@ template<typename T>
 Array<T>::Array(unsigned int n) : _size(n)
 {
     if (n > 0)
-        _array = new T[n]();//bunu sor
+        _array = new T[n]();
     else
         _array = NULL;
 }
