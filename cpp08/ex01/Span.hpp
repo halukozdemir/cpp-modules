@@ -7,6 +7,18 @@
 #include <exception>
 #include <climits>
 
+class SpanFullException : public std::exception
+{
+    public:
+        virtual const char* what() const throw();
+};
+
+class SpanTooSmallException : public std::exception
+{
+    public:
+        virtual const char* what() const throw();
+};
+
 class Span
 {
     private:
@@ -19,22 +31,24 @@ class Span
         ~Span();
         Span& operator=(const Span& other);
         void addNumber(int number);
+        template<typename Iterator>
+        void addNumbers(Iterator begin, Iterator end);
         unsigned int shortestSpan() const;
         unsigned int longestSpan() const;
         unsigned int getMaxSize() const;
         unsigned int getCurrentSize() const;
 };
 
-class SpanFullException : public std::exception
+template<typename Iterator>
+void Span::addNumbers(Iterator begin, Iterator end)
 {
-    public:
-        virtual const char* what() const throw();
-};
-
-class SpanTooSmallException : public std::exception
-{
-    public:
-        virtual const char* what() const throw();
-};
+    while (begin != end)
+    {
+        if (_numbers.size() >= _maxSize)
+            throw SpanFullException();
+        _numbers.push_back(*begin);
+        ++begin;
+    }
+}
 
 #endif

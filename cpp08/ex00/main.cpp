@@ -1,5 +1,4 @@
 #include "easyfind.hpp"
-#include <iostream>
 #include <vector>
 #include <list>
 #include <deque>
@@ -42,7 +41,25 @@ int main()
         std::cout << "30 not found in list" << std::endl;
     }
 
-    std::cout << "\n=== Test 3: Exception Test ===" << std::endl;
+    std::cout << "\n=== Test 3: Deque ===" << std::endl;
+    std::deque<int> dq;
+    dq.push_back(100);
+    dq.push_back(200);
+    dq.push_back(300);
+    dq.push_back(400);
+    dq.push_back(500);
+    try
+    {
+        std::deque<int>::iterator it = easyfind(dq, 200);
+        std::cout << "Found 200 at position: " << std::distance(dq.begin(), it) << std::endl;
+        std::cout << "Value: " << *it << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "200 not found in deque" << std::endl;
+    }
+
+    std::cout << "\n=== Test 4: Exception Test ===" << std::endl;
     try
     {
         std::vector<int>::iterator it = easyfind(vec, 999);
