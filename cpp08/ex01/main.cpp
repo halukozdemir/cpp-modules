@@ -87,7 +87,7 @@ int main()
     
     try
     {
-        tinySpan.addNumbers(tooMany.begin(), tooMany.end());  // 10 > 5!
+        tinySpan.addNumbers(tooMany.begin(), tooMany.end());
         std::cout << "Added all numbers" << std::endl;
     }
     catch (const SpanFullException& e)
@@ -95,6 +95,6 @@ int main()
         std::cout << "Exception caught: " << e.what() << std::endl;
         std::cout << "Successfully added: " << tinySpan.getCurrentSize() << " numbers" << std::endl;
     }
-    
+    gi
     return 0;
 }
