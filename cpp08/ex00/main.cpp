@@ -5,6 +5,7 @@
 
 int main()
 {
+
     std::cout << "=== Test 1: Vector ===" << std::endl;
     std::vector<int> vec;
     vec.push_back(1);
@@ -69,6 +70,5 @@ int main()
     {
         std::cout << "Exception caught: 999 not found in vector" << std::endl;
     }
-
     return 0;
 }
