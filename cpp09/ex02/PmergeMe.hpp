@@ -1,0 +1,38 @@
+#ifndef PMERGEME_HPP
+#define PMERGEME_HPP
+
+#include <iostream>
+#include <vector>
+#include <deque>
+#include <string>
+#include <sstream>
+#include <ctime>
+#include <cstdlib>
+#include <iomanip>
+
+class PmergeMe
+{
+    private:
+        std::vector<int> _vectorData;
+        std::deque<int> _dequeData;
+
+        void mergeInsertSortVector(std::vector<int>& arr);
+        void insertionSortVector(std::vector<int>& arr, int left, int right);
+        void mergeVector(std::vector<int>& arr, int left, int mid, int right);
+        
+        void mergeInsertSortDeque(std::deque<int>& arr);
+        void insertionSortDeque(std::deque<int>& arr, int left, int right);
+        void mergeDeque(std::deque<int>& arr, int left, int mid, int right);
+
+        bool isValidNumber(const std::string& str);
+        void parseInput(int argc, char **argv);
+    public:
+        PmergeMe();
+        PmergeMe(const PmergeMe& other);
+        PmergeMe& operator=(const PmergeMe& other);
+        ~PmergeMe();
+
+        void run(int argc, char **argv);
+};
+
+#endif
