@@ -60,8 +60,6 @@ cpp-modules/
 
 ### Derleme
 ```bash
-# Tüm modülleri derle
-make
 
 # Belirli bir modülü derle
 cd cpp00/ex00
