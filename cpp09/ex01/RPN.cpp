@@ -26,7 +26,7 @@ int RPN::calculateRPN(std::string& str)
     int result = 0;
     std::string::iterator it;
     std::string keys = "+-*/";
-    for (it = str.begin(); it != str.end(); ++it)//++it'i sor
+    for (it = str.begin(); it != str.end(); ++it)
     {
         if (*it == ' ')
             continue ;

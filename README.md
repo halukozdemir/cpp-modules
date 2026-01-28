@@ -51,9 +51,14 @@ cpp-modules/
 │   ├── ex00/              # Function templates
 │   ├── ex01/              # Iterator templates
 │   └── ex02/              # Array template class
-└── cpp08/                  # Module 08: STL
-    ├── ex00/              # EasyFind - STL algorithms
-    └── ex01/              # Span - Container implementation
+├── cpp08/                  # Module 08: STL
+│   ├── ex00/              # EasyFind - STL algorithms
+│   ├── ex01/              # Span - Container implementation
+│   └── ex02/              # MutantStack - Iterable stack
+└── cpp09/                  # Module 09: STL Applications
+    ├── ex00/              # BitcoinExchange - BTC value calculator
+    ├── ex01/              # RPN - Reverse Polish Notation
+    └── ex02/              # PmergeMe - Ford-Johnson sort
 ```
 
 ## 🚀 Kullanım
@@ -118,6 +123,12 @@ make
 ### Module 08: STL
 - **EasyFind**: STL algorithms
 - **Span**: Container implementation
+- **MutantStack**: Stack sınıfını iterable yapma
+
+### Module 09: STL Applications
+- **BitcoinExchange**: CSV parsin ve tarih bazlı BTC değeri hesaplama
+- **RPN**: Reverse Polish Notation hesap makinesi
+- **PmergeMe**: Ford-Johnson algoritması ile sıralama ve container karşılaştırması
 
 ## 🔧 Teknik Özellikler
 
@@ -187,6 +198,26 @@ make
 # BSP test
 ./bsp
 # Point in triangle algorithm
+```
+
+### Module 08 Tests
+```bash
+# MutantStack test
+cd cpp08/ex02
+make
+./mutantstack
+```
+
+### Module 09 Tests
+```bash
+# BitcoinExchange test
+./btc input.txt
+
+# RPN test
+./RPN "8 9 * 9 - 9 - 9 - 4 - 1 +"
+
+# PmergeMe test
+./PmergeMe `shuf -i 1-1000 -n 3000 | tr "\n" " "`
 ```
 
 ## 📊 Performans
@@ -306,9 +337,14 @@ cpp-modules/
 │   ├── ex00/              # Function templates
 │   ├── ex01/              # Iterator templates
 │   └── ex02/              # Array template class
-└── cpp08/                  # Module 08: STL
-    ├── ex00/              # EasyFind - STL algorithms
-    └── ex01/              # Span - Container implementation
+├── cpp08/                  # Module 08: STL
+│   ├── ex00/              # EasyFind - STL algorithms
+│   ├── ex01/              # Span - Container implementation
+│   └── ex02/              # MutantStack - Iterable stack
+└── cpp09/                  # Module 09: STL Applications
+    ├── ex00/              # BitcoinExchange - BTC value calculator
+    ├── ex01/              # RPN - Reverse Polish Notation
+    └── ex02/              # PmergeMe - Ford-Johnson sort
 ```
 
 ## 🚀 Usage
@@ -375,6 +411,12 @@ make
 ### Module 08: STL
 - **EasyFind**: STL algorithms
 - **Span**: Container implementation
+- **MutantStack**: Making Stack class iterable
+
+### Module 09: STL Applications
+- **BitcoinExchange**: CSV parsing and date-based BTC value calculation
+- **RPN**: Reverse Polish Notation calculator
+- **PmergeMe**: Sorting with Ford-Johnson algorithm and container comparison
 
 ## 🔧 Technical Features
 
@@ -444,6 +486,26 @@ make
 # BSP test
 ./bsp
 # Point in triangle algorithm
+```
+
+### Module 08 Tests
+```bash
+# MutantStack test
+cd cpp08/ex02
+make
+./mutantstack
+```
+
+### Module 09 Tests
+```bash
+# BitcoinExchange test
+./btc input.txt
+
+# RPN test
+./RPN "8 9 * 9 - 9 - 9 - 4 - 1 +"
+
+# PmergeMe test
+./PmergeMe `shuf -i 1-1000 -n 3000 | tr "\n" " "`
 ```
 
 ## 📊 Performance
